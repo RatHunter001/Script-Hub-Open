@@ -42,7 +42,7 @@ Public Class MainForm
 
         Else
             MsgBox("Kullandığınız Script Hub'un sürümü güncel değil. Lütfen yeni sürümü indiriniz.", vbCritical, "Hata")
-            Process.Start("http://scripthub.dsf001.site/")
+            Process.Start("https://scripthub.dsf001.site/download.php")
             End
         End If
         If My.Settings.RobloxUsername = String.Empty Then
@@ -135,6 +135,10 @@ Public Class MainForm
     End Sub
 
     Private Sub HakkındaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HakkındaToolStripMenuItem.Click
+        'old
+    End Sub
+
+    Private Sub DsfsDiscordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DsfsDiscordToolStripMenuItem.Click
 
     End Sub
 End Class
