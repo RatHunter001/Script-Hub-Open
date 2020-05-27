@@ -31,6 +31,7 @@ Public Class MainForm
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LanguageFunctions.Changelanguage("MainForm", "English")
 #Disable Warning BC42025 ' Access of shared member, constant member, enum member or nested type through an instance
         Me.CheckForIllegalCrossThreadCalls = False
 #Enable Warning BC42025 ' Access of shared member, constant member, enum member or nested type through an instance
@@ -42,7 +43,7 @@ Public Class MainForm
 
         Else
             MsgBox("Kullandığınız Script Hub'un sürümü güncel değil. Lütfen yeni sürümü indiriniz.", vbCritical, "Hata")
-            Process.Start("http://scripthub.dsf001.site/")
+            Process.Start("https://scripthub.dsf001.site/")
             End
         End If
         If My.Settings.RobloxUsername = String.Empty Then
@@ -120,7 +121,7 @@ Public Class MainForm
         End Try
     End Sub
 
-    Private Sub HakkındaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles HakkındaToolStripMenuItem1.Click
+    Private Sub HakkındaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
         About.Show()
     End Sub
 
@@ -134,7 +135,7 @@ Public Class MainForm
 
     End Sub
 
-    Private Sub HakkındaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HakkındaToolStripMenuItem.Click
+    Private Sub HakkındaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OtherToolStripMenuItem.Click
 
     End Sub
 End Class

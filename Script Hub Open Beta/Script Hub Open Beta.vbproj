@@ -96,6 +96,7 @@
     <Compile Include="ChangeUsername.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="languages.vb" />
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -133,7 +134,19 @@
     <EmbeddedResource Include="ChangeUsername.resx">
       <DependentUpon>ChangeUsername.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.en-AS.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.en.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.tr-CY.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.tr.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">

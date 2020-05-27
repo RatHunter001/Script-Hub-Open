@@ -33,9 +33,9 @@ Partial Class MainForm
         Me.LoadStringsBox = New System.Windows.Forms.ListBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.RequiresBox = New System.Windows.Forms.ListBox()
-        Me.HakkındaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HakkındaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RobloxuKapatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OtherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RobloxStuffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BütünAçıkRobloxplayerbetaLarıKapatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RobloxAçıkMıTestEtToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DiscordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -73,6 +73,7 @@ Partial Class MainForm
         Me.FastColoredTextBox1.CommentPrefix = "--"
         Me.FastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.FastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.FastColoredTextBox1.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.FastColoredTextBox1.IsReplaceMode = False
         Me.FastColoredTextBox1.Language = FastColoredTextBoxNS.Language.Lua
         Me.FastColoredTextBox1.LeftBracket = Global.Microsoft.VisualBasic.ChrW(40)
@@ -169,25 +170,25 @@ Partial Class MainForm
         Me.RequiresBox.Sorted = True
         Me.RequiresBox.TabIndex = 5
         '
-        'HakkındaToolStripMenuItem
+        'OtherToolStripMenuItem
         '
-        Me.HakkındaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HakkındaToolStripMenuItem1, Me.RobloxuKapatToolStripMenuItem, Me.DiscordToolStripMenuItem})
-        Me.HakkındaToolStripMenuItem.Name = "HakkındaToolStripMenuItem"
-        Me.HakkındaToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
-        Me.HakkındaToolStripMenuItem.Text = "Diğer"
+        Me.OtherToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.RobloxStuffToolStripMenuItem, Me.DiscordToolStripMenuItem})
+        Me.OtherToolStripMenuItem.Name = "OtherToolStripMenuItem"
+        Me.OtherToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
+        Me.OtherToolStripMenuItem.Text = "Diğer"
         '
-        'HakkındaToolStripMenuItem1
+        'AboutToolStripMenuItem
         '
-        Me.HakkındaToolStripMenuItem1.Name = "HakkındaToolStripMenuItem1"
-        Me.HakkındaToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.HakkındaToolStripMenuItem1.Text = "Hakkında"
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Text = "Hakkında"
         '
-        'RobloxuKapatToolStripMenuItem
+        'RobloxStuffToolStripMenuItem
         '
-        Me.RobloxuKapatToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BütünAçıkRobloxplayerbetaLarıKapatToolStripMenuItem, Me.RobloxAçıkMıTestEtToolStripMenuItem})
-        Me.RobloxuKapatToolStripMenuItem.Name = "RobloxuKapatToolStripMenuItem"
-        Me.RobloxuKapatToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.RobloxuKapatToolStripMenuItem.Text = "Roblox işlemleri"
+        Me.RobloxStuffToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BütünAçıkRobloxplayerbetaLarıKapatToolStripMenuItem, Me.RobloxAçıkMıTestEtToolStripMenuItem})
+        Me.RobloxStuffToolStripMenuItem.Name = "RobloxStuffToolStripMenuItem"
+        Me.RobloxStuffToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RobloxStuffToolStripMenuItem.Text = "Roblox işlemleri"
         '
         'BütünAçıkRobloxplayerbetaLarıKapatToolStripMenuItem
         '
@@ -216,7 +217,7 @@ Partial Class MainForm
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AyarlarToolStripMenuItem, Me.HakkındaToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AyarlarToolStripMenuItem, Me.OtherToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(368, 24)
@@ -331,9 +332,9 @@ Partial Class MainForm
     Friend WithEvents LoadStringsBox As ListBox
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents RequiresBox As ListBox
-    Friend WithEvents HakkındaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HakkındaToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents RobloxuKapatToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OtherToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RobloxStuffToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BütünAçıkRobloxplayerbetaLarıKapatToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RobloxAçıkMıTestEtToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DiscordToolStripMenuItem As ToolStripMenuItem
