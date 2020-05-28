@@ -23,22 +23,22 @@ Partial Class About
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(About))
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ProgrammerLabel = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label2
+        'ProgrammerLabel
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Hack", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.Label2.Location = New System.Drawing.Point(236, 63)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(252, 22)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Programcı: dsf001#1337"
+        Me.ProgrammerLabel.AutoSize = True
+        Me.ProgrammerLabel.Font = New System.Drawing.Font("Hack", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.ProgrammerLabel.Location = New System.Drawing.Point(236, 63)
+        Me.ProgrammerLabel.Name = "ProgrammerLabel"
+        Me.ProgrammerLabel.Size = New System.Drawing.Size(252, 22)
+        Me.ProgrammerLabel.TabIndex = 6
+        Me.ProgrammerLabel.Text = "Programcı: dsf001#1337"
         '
         'Label1
         '
@@ -74,7 +74,7 @@ Partial Class About
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(553, 223)
         Me.Controls.Add(Me.RichTextBox1)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.ProgrammerLabel)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -88,7 +88,7 @@ Partial Class About
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label2 As Label
+    Friend WithEvents ProgrammerLabel As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents RichTextBox1 As RichTextBox

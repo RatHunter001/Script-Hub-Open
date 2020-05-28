@@ -52,6 +52,7 @@ Partial Class MainForm
         Me.DownloadButton = New System.Windows.Forms.Button()
         Me.StatusLabel = New System.Windows.Forms.Label()
         Me.StatusTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.FastColoredTextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -73,7 +74,6 @@ Partial Class MainForm
         Me.FastColoredTextBox1.CommentPrefix = "--"
         Me.FastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.FastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
-        Me.FastColoredTextBox1.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.FastColoredTextBox1.IsReplaceMode = False
         Me.FastColoredTextBox1.Language = FastColoredTextBoxNS.Language.Lua
         Me.FastColoredTextBox1.LeftBracket = Global.Microsoft.VisualBasic.ChrW(40)
@@ -180,14 +180,14 @@ Partial Class MainForm
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.AboutToolStripMenuItem.Text = "Hakkında"
         '
         'RobloxStuffToolStripMenuItem
         '
         Me.RobloxStuffToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BütünAçıkRobloxplayerbetaLarıKapatToolStripMenuItem, Me.RobloxAçıkMıTestEtToolStripMenuItem})
         Me.RobloxStuffToolStripMenuItem.Name = "RobloxStuffToolStripMenuItem"
-        Me.RobloxStuffToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RobloxStuffToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.RobloxStuffToolStripMenuItem.Text = "Roblox işlemleri"
         '
         'BütünAçıkRobloxplayerbetaLarıKapatToolStripMenuItem
@@ -206,13 +206,13 @@ Partial Class MainForm
         '
         Me.DiscordToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DsfsDiscordToolStripMenuItem})
         Me.DiscordToolStripMenuItem.Name = "DiscordToolStripMenuItem"
-        Me.DiscordToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DiscordToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.DiscordToolStripMenuItem.Text = "Discord"
         '
         'DsfsDiscordToolStripMenuItem
         '
         Me.DsfsDiscordToolStripMenuItem.Name = "DsfsDiscordToolStripMenuItem"
-        Me.DsfsDiscordToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DsfsDiscordToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.DsfsDiscordToolStripMenuItem.Text = "TRExploiters"
         '
         'MenuStrip1
@@ -292,6 +292,10 @@ Partial Class MainForm
         Me.StatusLabel.Size = New System.Drawing.Size(0, 18)
         Me.StatusLabel.TabIndex = 36
         '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -351,4 +355,5 @@ Partial Class MainForm
     Friend WithEvents DownloadButton As Button
     Friend WithEvents StatusLabel As Label
     Friend WithEvents StatusTimer As Timer
+    Friend WithEvents Timer1 As Timer
 End Class

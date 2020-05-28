@@ -6,13 +6,13 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Version" Type="System.String" Scope="User">
-      <Value Profile="(Default)">1.1</Value>
+      <Value Profile="(Default)">1.2</Value>
     </Setting>
     <Setting Name="BackgroundColorMain" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Language" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Turkish</Value>
+      <Value Profile="(Default)">English</Value>
     </Setting>
   </Settings>
 </SettingsFile>

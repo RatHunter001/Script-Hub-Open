@@ -68,7 +68,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("1.1")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1.2")>  _
         Public Property Version() As String
             Get
                 Return CType(Me("Version"),String)
@@ -91,7 +91,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Turkish")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("English")>  _
         Public Property Language() As String
             Get
                 Return CType(Me("Language"),String)

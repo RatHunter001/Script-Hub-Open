@@ -31,7 +31,23 @@ Public Class MainForm
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LanguageFunctions.Changelanguage("MainForm", "English")
+        If My.Settings.Language = "Turkish" Then
+            LanguageFunctions.ChangeLanguage("MainForm", "Turkish")
+            LanguageFunctions.ChangeLanguage("Settings", "Turkish")
+            LanguageFunctions.ChangeLanguage("ChangeUsername", "Turkish")
+            LanguageFunctions.ChangeLanguage("About", "Turkish")
+        ElseIf My.Settings.Language = "English" Then
+            LanguageFunctions.ChangeLanguage("MainForm", "English")
+            LanguageFunctions.ChangeLanguage("Settings", "English")
+            LanguageFunctions.ChangeLanguage("ChangeUsername", "English")
+            LanguageFunctions.ChangeLanguage("About", "English")
+        Else
+            LanguageFunctions.ChangeLanguage("MainForm", "English")
+            LanguageFunctions.ChangeLanguage("Settings", "English")
+            LanguageFunctions.ChangeLanguage("ChangeUsername", "English")
+            LanguageFunctions.ChangeLanguage("About", "English")
+        End If
+
 #Disable Warning BC42025 ' Access of shared member, constant member, enum member or nested type through an instance
         Me.CheckForIllegalCrossThreadCalls = False
 #Enable Warning BC42025 ' Access of shared member, constant member, enum member or nested type through an instance
@@ -42,12 +58,30 @@ Public Class MainForm
         If My.Settings.Version = currentver Then
 
         Else
-            MsgBox("Kullandığınız Script Hub'un sürümü güncel değil. Lütfen yeni sürümü indiriniz.", vbCritical, "Hata")
-            Process.Start("https://scripthub.dsf001.site/")
-            End
+            If My.Settings.Language = "Turkish" Then
+                MsgBox(TurkishMainFormLanguages.NotUpdated, vbCritical, "Hata")
+                Process.Start("https://scripthub.dsf001.site/")
+                End
+            ElseIf My.Settings.Language = "English" Then
+                MsgBox(EnglishMainFormLanguages.NotUpdated, vbCritical, "Error")
+                Process.Start("https://scripthub.dsf001.site/")
+                End
+            Else
+                MsgBox("Kullandığınız Script Hub'un sürümü güncel değil. Lütfen yeni sürümü indiriniz.", vbCritical, "Hata")
+                Process.Start("https://scripthub.dsf001.site/")
+                End
+            End If
+
         End If
         If My.Settings.RobloxUsername = String.Empty Then
-            MsgBox("Görünüşe göre kayıtlı bir kullanıcı adınız yok. Script Hub'un bütün özelliklerinden faydalanabilmek için lütfen kullanıcı adınızı ayarlar kısmından belirleyin.", vbInformation, "Bilgi")
+            If My.Settings.Language = "Turkish" Then
+                MsgBox(TurkishMainFormLanguages.NoSavedUsername, vbInformation, "Bilgi")
+            ElseIf My.Settings.Language = "English" Then
+                MsgBox(EnglishMainFormLanguages.NoSavedUsername, vbInformation, "Info")
+            Else
+                MsgBox("Görünüşe göre kayıtlı bir kullanıcı adınız yok. Script Hub'un bütün özelliklerinden faydalanabilmek için lütfen kullanıcı adınızı ayarlar kısmından belirleyin.", vbInformation, "Bilgi")
+            End If
+
         End If
         RefreshButton.PerformClick()
     End Sub
@@ -90,9 +124,22 @@ Public Class MainForm
         Dim p() As Process
         p = Process.GetProcessesByName("RobloxPlayerBeta")
         If p.Count > 0 Then
-            MsgBox("Roblox Açık.", vbInformation, "Bilgi")
+            If My.Settings.Language = "Turkish" Then
+                MsgBox(TurkishMainFormLanguages.RobloxOpen, vbInformation, "Bilgi")
+            ElseIf My.Settings.Language = "English" Then
+                MsgBox(EnglishMainFormLanguages.RobloxOpen, vbInformation, "Info")
+            Else
+                MsgBox("Roblox Açık.", vbInformation, "Bilgi")
+            End If
         Else
-            MsgBox("Roblox Kapalı.", vbInformation, "Bilgi")
+            If My.Settings.Language = "Turkish" Then
+                MsgBox(TurkishMainFormLanguages.RobloxNotOpen, vbInformation, "Bilgi")
+            ElseIf My.Settings.Language = "English" Then
+                MsgBox(EnglishMainFormLanguages.RobloxNotOpen, vbInformation, "Info")
+            Else
+                MsgBox("Roblox Kapalı.", vbInformation, "Bilgi")
+            End If
+
         End If
     End Sub
 
@@ -102,7 +149,14 @@ Public Class MainForm
             BasicScriptsBox.Items.Clear()
             LoadStringsBox.Items.Clear()
             RequiresBox.Items.Clear()
-            StatusLabel.Text = "Yenileniyor..."
+            If My.Settings.Language = "Turkish" Then
+                StatusLabel.Text = TurkishMainFormLanguages.Refreshing
+            ElseIf My.Settings.Language = "English" Then
+                StatusLabel.Text = EnglishMainFormLanguages.Refreshing
+            Else
+                StatusLabel.Text = "Yenileniyor..."
+            End If
+
             Dim client As New Net.WebClient
             Dim FEScriptList As String = PHPFunctions.PHP("https://scripthub.dsf001.site/GetDir.php", "POST", "FileMethod=ReturnFiles&DirectoryToScan=ScriptHub/FE/")
             ParseInputJSON(FEScriptList, FEScriptsBox, "ScriptHub/FE/")
@@ -117,7 +171,13 @@ Public Class MainForm
             ParseInputJSON(RequireList, RequiresBox, "ScriptHub/Requires/")
             StatusLabel.Text = ""
         Catch ex As Exception
-            StatusLabel.Text = "Hata!"
+            If My.Settings.Language = "Turkish" Then
+                StatusLabel.Text = TurkishMainFormLanguages.ErrorString
+            ElseIf My.Settings.Language = "English" Then
+                StatusLabel.Text = EnglishMainFormLanguages.ErrorString
+            Else
+                StatusLabel.Text = "Hata!"
+            End If
         End Try
     End Sub
 
@@ -136,6 +196,14 @@ Public Class MainForm
     End Sub
 
     Private Sub HakkındaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OtherToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
+    End Sub
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
 
     End Sub
 End Class

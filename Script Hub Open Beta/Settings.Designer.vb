@@ -23,22 +23,24 @@ Partial Class Settings
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Settings))
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.BackgroundColorLabel = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.UsernameLabel = New System.Windows.Forms.Label()
+        Me.ChangeButton = New System.Windows.Forms.Button()
+        Me.BackButton = New System.Windows.Forms.Button()
+        Me.LanguageLabel = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
-        'Label1
+        'BackgroundColorLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.Label1.Location = New System.Drawing.Point(13, 13)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(115, 20)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Arkaplan rengi:"
+        Me.BackgroundColorLabel.AutoSize = True
+        Me.BackgroundColorLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.BackgroundColorLabel.Location = New System.Drawing.Point(13, 13)
+        Me.BackgroundColorLabel.Name = "BackgroundColorLabel"
+        Me.BackgroundColorLabel.Size = New System.Drawing.Size(115, 20)
+        Me.BackgroundColorLabel.TabIndex = 0
+        Me.BackgroundColorLabel.Text = "Arkaplan rengi:"
         '
         'Button1
         '
@@ -48,44 +50,66 @@ Partial Class Settings
         Me.Button1.TabIndex = 1
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Label2
+        'UsernameLabel
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
-        Me.Label2.Location = New System.Drawing.Point(13, 48)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(95, 20)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Kullanıcı adı:"
+        Me.UsernameLabel.AutoSize = True
+        Me.UsernameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.UsernameLabel.Location = New System.Drawing.Point(13, 48)
+        Me.UsernameLabel.Name = "UsernameLabel"
+        Me.UsernameLabel.Size = New System.Drawing.Size(95, 20)
+        Me.UsernameLabel.TabIndex = 2
+        Me.UsernameLabel.Text = "Kullanıcı adı:"
         '
-        'Button2
+        'ChangeButton
         '
-        Me.Button2.Location = New System.Drawing.Point(114, 71)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(66, 23)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Değiştir"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ChangeButton.Location = New System.Drawing.Point(114, 71)
+        Me.ChangeButton.Name = "ChangeButton"
+        Me.ChangeButton.Size = New System.Drawing.Size(66, 23)
+        Me.ChangeButton.TabIndex = 3
+        Me.ChangeButton.Text = "Değiştir"
+        Me.ChangeButton.UseVisualStyleBackColor = True
         '
-        'Button3
+        'BackButton
         '
-        Me.Button3.Location = New System.Drawing.Point(13, 255)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "< Geri"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.BackButton.Location = New System.Drawing.Point(13, 255)
+        Me.BackButton.Name = "BackButton"
+        Me.BackButton.Size = New System.Drawing.Size(75, 23)
+        Me.BackButton.TabIndex = 4
+        Me.BackButton.Text = "< Geri"
+        Me.BackButton.UseVisualStyleBackColor = True
+        '
+        'LanguageLabel
+        '
+        Me.LanguageLabel.AutoSize = True
+        Me.LanguageLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(162, Byte))
+        Me.LanguageLabel.Location = New System.Drawing.Point(13, 107)
+        Me.LanguageLabel.Name = "LanguageLabel"
+        Me.LanguageLabel.Size = New System.Drawing.Size(85, 20)
+        Me.LanguageLabel.TabIndex = 5
+        Me.LanguageLabel.Text = "Language:"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"English", "Turkish"})
+        Me.ComboBox1.Location = New System.Drawing.Point(104, 107)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 6
         '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(294, 290)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.LanguageLabel)
+        Me.Controls.Add(Me.BackButton)
+        Me.Controls.Add(Me.ChangeButton)
+        Me.Controls.Add(Me.UsernameLabel)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.BackgroundColorLabel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(310, 329)
@@ -97,9 +121,11 @@ Partial Class Settings
 
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents BackgroundColorLabel As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents UsernameLabel As Label
+    Friend WithEvents ChangeButton As Button
+    Friend WithEvents BackButton As Button
+    Friend WithEvents LanguageLabel As Label
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
